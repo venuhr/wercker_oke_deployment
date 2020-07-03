@@ -64,10 +64,10 @@ build:
     - slack-notifier:
           url: $SLACK_URL 
           channel: notifications 
-          custom_message: Deploying $WERCKER_GIT_BRANCH to $WERCKER_DEPLOYTARGET_NAME ($WERCKER_DEPLOY_URL) 
+          custom_message: Building Image $WERCKER_GIT_BRANCH to $WERCKER_DEPLOYTARGET_NAME ($WERCKER_DEPLOY_URL) 
 
 
-deploy-to-minikube:
+deploy-to-oke:
   box:
         id: alpine
         cmd: /bin/sh
